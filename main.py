@@ -18,24 +18,24 @@ def seq3np1(n):
     return count            # the last print is 1
 
 def graph_max_iterations(n):
-  ted = turtle.Turtle()
+  writer = turtle.Turtle()
   wn = turtle.Screen()
   wn.mode('world')
   wn.reset()
   wn.setworldcoordinates(0,0,10,10)
-  darty = turtle.Turtle()
+  grapher = turtle.Turtle()
   max_so_far = 0
   for iterations in range(1,n + 1):
     result = seq3np1(iterations)
     if result > max_so_far:
       max_so_far = result
-    ted.clear()
-    ted.penup()
-    ted.goto(0,max_so_far)
+    writer.clear()
+    writer.penup()
+    writer.goto(0,max_so_far)
     message = "Maximum so far:",iterations,result
-    ted.write(message)
+    writer.write(message)
     wn.setworldcoordinates(0,0,n+10,max_so_far + 10)
-    darty.goto(iterations,result)
+    grapher.goto(iterations,result)
   wn.exitonclick()
 
 def main():
